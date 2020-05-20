@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    <meta charset="UTF-8">
+    <title>Lessons 11 Validation [Edit]</title>
+    <style>
+        .validationErrors  {
+            color: #ff60e7;
+        }
+    </style>
+</head>
+<body>
+
+<h3>Edit</h3>
+<table class="centered">
+    <tr>
+        <th>Name</th>
+        <th>Author</th>
+    </tr>
+
+</table>
+<div class="container center">
+    <form action="#" th:action="@{'/' + ${book.id}}" th:object="${book}" method="post">
+        <p>author<input type="text" th:field="*{author}"></p>
+
+        <span class="validationErrors"
+        th:if="${#fields.hasErrors('author')}"
+        th:errors="*{author}">
+        </span>
+
+        <p>name<input type="text" th:field="*{name}"></p>
+
+        <span class="validationErrors"
+              th:if="${#fields.hasErrors('name')}"
+              th:errors="*{name}">
+        </span>
+        <p><input type="submit" value="edit book" class="btn btn-primary green"/>  </p>
+    </form>
+</div>
+</body>
+</html>

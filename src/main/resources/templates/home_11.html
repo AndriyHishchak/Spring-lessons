@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    <meta charset="UTF-8">
+    <title>Lessons 11 Validation [main]</title>
+</head>
+<body>
+
+<h3>List of books</h3>
+<table class="centered">
+    <tr>
+        <th>Name</th>
+        <th>Author</th>
+    </tr>
+        <tr th:each="book:${books}">
+        <td th:text="${book !=null} ? ${book.name} : 'book is null'"></td>
+        <td th:text="${book !=null} ? ${book.author} : 'book is null'"></td>
+            <td><a href="" th:href="@{'/' + ${book.id} + '/show'}">Show</a></td>
+            <td><a href="" th:href="@{'/' + ${book.id} + '/edit'}">Edit</a></td>
+            <td><a href="" th:href="@{'/' + ${book.id} + '/delete'}">Delete</a></td>
+    </tr>
+
+</table>
+<div class="container center">
+<form action="#" th:action="@{/}" th:object="${newbook}" method="post">
+    <p>author<input type="text" th:field="*{author}"></p>
+    <p>name<input type="text" th:field="*{name}"></p>
+
+    <p><input type="submit" value="Create" class="btn btn-primary green"/>    <input type="reset" value="Reset" class="btn btn-primary red"/></p>
+</form>
+</div>
+</body>
+</html>

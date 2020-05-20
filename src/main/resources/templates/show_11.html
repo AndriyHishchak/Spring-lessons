@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    <title>Lessons 11 Validation [show]</title>
+</head>
+<body>
+
+<h3>Your book</h3>
+<table class="centered">
+    <tr>
+        <th>Name</th>
+        <th>Author</th>
+    </tr>
+    <tr>
+        <td th:text="${book !=null} ? ${book.name} : 'book is null'"></td>
+        <td th:text="${book !=null} ? ${book.author} : 'book is null'"></td>
+
+    </tr>
+
+</table>
+
+</div>
+</body>
+</html>>
