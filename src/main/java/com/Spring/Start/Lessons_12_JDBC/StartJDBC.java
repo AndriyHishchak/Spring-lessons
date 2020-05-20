@@ -16,7 +16,7 @@ public class StartJDBC {
 
 		BuyerrepoJDBC buyerrepoJDBC = ctx.getBean(BuyerrepoJDBC.class);
 		buyerrepoJDBC.save(new Buyer(1L,"Andriy","Ukraine",1000));
-		buyerrepoJDBC.save(new Buyer(1L,"petro","Ukraine",250));
+		buyerrepoJDBC.save(new Buyer(2L,"petro","Ukraine",250));
 
 		// не коректний запис Sql
 		// System.out.println(buyerrepoJDBC.findById("1"));
