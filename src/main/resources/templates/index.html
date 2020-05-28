@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script  src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .turbolinks-progress-bar {
+            height: 5px;
+            background-color: darkviolet;
+        }</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">APP API</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/}">Home</a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/login}">Login page</a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/registration}">Registration</a>
+            </li>
+
+
+
+        <li class="nav-item active">
+            <a class="nav-link" th:href="@{/forUser}">User</a>
+        </li>
+
+    <li class="nav-item active">
+        <a class="nav-link" th:href="@{/forAdmin}">Admin</a>
+    </li>
+
+
+
+</ul>
+<div class="navbar-text mr-3" th:if="${user!='anonumys'}" th:text="'Hi,' + ${user}">
+    <div th:if="${user=='anonumys'}}" th:text='Please, login'></div>
+</div>
+    </div>
+</nav>
+<form th:if=${user!='anonumys'} th:action="@{/logout}"  method="post">
+    <input type="hidden" />
+
+    <button class="btn btn-primary" type="submit">Logout</button>
+</form>
+<div
+<p th:text="${user}"></p>
+</body>
+</body>
+</html>

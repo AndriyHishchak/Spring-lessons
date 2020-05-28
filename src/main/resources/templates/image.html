@@ -9,7 +9,7 @@
 <h3>Load image</h3>
 <p th:text="${message}"></p>
 
-<form th:action="@{/image}" method="post" enctype="multipart/form-data">
+<form th:action="@{/image}" method="post" enctype="multipart/form-data" >
  description: <input type="text" name="description"/>
  image: <input type="file" name="file"/>
     <input type="submit" value="Load file"/>
