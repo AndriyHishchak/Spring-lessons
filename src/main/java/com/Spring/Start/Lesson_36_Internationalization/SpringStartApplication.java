@@ -1,0 +1,19 @@
+package com.Spring.Start.Lesson_36_Internationalization;
+
+import io.netty.channel.nio.NioEventLoopGroup;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
+
+
+@SpringBootApplication
+
+public class SpringStartApplication {
+	public static void main(String[] args) {
+		SpringApplication.run(SpringStartApplication.class, args);
+	}
+
+
+
+}
+

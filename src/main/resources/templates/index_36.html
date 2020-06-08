@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+
+<h2>Index page</h2>
+
+<h1 th:text="#{title}"></h1>
+
+<div>
+    <a th:href="@{'?locale=de'}">DE</a>
+    <a th:href="@{'?locale=ru'}">RU</a>
+    <a th:href="@{'?locale=uk'}">UK</a>
+    <a th:href="@{'?locale=en'}">EN</a>
+
+</div>
+</body>
+</html>
