@@ -1,25 +1,33 @@
-ws = new WebSocket("ws://localhost:8084/pong");
+ws = new WebSocket("ws://localhost:8086/pong");
 
 ws.onopen = function () {
-    action("open connection")
+   // actionSec("open connection")
 }
 
 ws.onmessage = function (ev) {
-    action(ev.data)
+    actionSec(ev.data)
 }
 
 ws.onerror = function (ev) {}
 ws.onclose = function (ev) {}
 
-function action(message) {
-    var output = document.getElementById("stack");
+function actionSec(message) {
+    var output = document.getElementById("inscroll");
     var newP = document.createElement("p");
     newP.appendChild(document.createTextNode(message));
     output.appendChild(newP);
 }
 
-function  ping() {
+window.onmousemove=function (e) {
+    var xx = $(document).height * .9 - e.y
+    if(xx < 0) {
+        ws.send("load");
+    }
+}
+
+/*function  ping() {
 var message = document.getElementById('message').value;
 action('send :' + message);
-ws.send(message)
-}
+ws.send(message)*/
+
+

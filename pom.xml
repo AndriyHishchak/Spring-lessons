@@ -30,6 +30,16 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>6.1.5.Final</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.webjars.npm/flatmap-stream -->
+
+
+		<!-- https://mvnrepository.com/artifact/com.thoughtworks.dsl/keywords-flatmap -->
+		<dependency>
+			<groupId>com.thoughtworks.dsl</groupId>
+			<artifactId>keywords-flatmap_2.13</artifactId>
+			<version>1.5.3+6-cd4da19b</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-websocket -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -69,6 +79,7 @@
 			<version>5.3.2.RELEASE</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
 
 		<!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
 		<dependency>
@@ -88,14 +99,11 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>5.2.6.RELEASE</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-core -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
